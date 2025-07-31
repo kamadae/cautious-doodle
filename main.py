@@ -1,17 +1,30 @@
 """Entry point for the RPG project."""
 
-from combat.system import CombatSystem
 from monster.goblin import Goblin
-from player.base import Player
+from player.mage import Mage
+from player.rogue import Rogue
+from player.warrior import Warrior
 from inventory.consumable import HealingPotion
 from world.world import WorldManager
-from gui import HUD, ScreenManager
+from gui import HUD, ScreenManager, Menu
+
+
+def create_player():
+    """Ask the user for a name and class and return the new Player."""
+    name = input("Enter your character name: ") or "Hero"
+    menu = Menu("Choose your class", ["Mage", "Rogue", "Warrior"])
+    choice = menu.open()
+    if choice == 0:
+        return Mage(name)
+    if choice == 1:
+        return Rogue(name)
+    return Warrior(name)
 
 
 def main():
     """Run a small top-down demo with one monster and one item."""
     world = WorldManager(5, 5)
-    player = Player("Hero")
+    player = create_player()
     hud = HUD()
     screens = ScreenManager()
     screens.push(hud)
@@ -43,7 +56,7 @@ def main():
         world.move_player(player, dx, dy)
         current = screens.current()
         if hasattr(current, "render"):
-            current.render(player)
+            current.render(player, world.current_area)
     print("Game over")
 
 

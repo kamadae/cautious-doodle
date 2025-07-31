@@ -1,0 +1,1 @@
+Place sprite images here.

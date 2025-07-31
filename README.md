@@ -19,14 +19,16 @@ Execute::
 
     python main.py
 
-This will start a very small top-down demo. Use ``WASD`` keys to move
-your character around a 5x5 grid. Pick up the potion lying on the
+This will start a very small top-down demo. First you will be asked for
+your character's name and class. Use ``WASD`` keys to move your hero
+around a 5x5 grid. Pick up the potion lying on the
 ground and walk into the goblin to trigger a battle. The combat plays
 out automatically once an encounter occurs. Stepping on certain tiles
 will transition you to another ``Area`` such as the interior of a
 building before returning outside.
 
-While moving, a simple text HUD displays your current HP and level.
+While moving, a simple text HUD displays your current HP, level and
+current coordinates so you always know where you are on the map.
 
 ## Playtesting
 
@@ -61,3 +63,11 @@ Gathered materials are used by other skills to create better items. The
 removing the herbs from your inventory. The ``smithing`` skill forges
 ``Steel Ingot``s out of ``Iron Ore``. Crafting actions consume resources and
 help those skills level up.
+
+## Assets
+
+The project ships with an ``assets`` folder containing ``sprites``,
+``audio`` and ``fonts`` subdirectories. Add your own images (for
+example ``hero.png`` or ``goblin.png``) to ``assets/sprites`` and any
+sound effects or music to ``assets/audio``. The code simply references
+these file names so you can swap in whatever art you like.
