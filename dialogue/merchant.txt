@@ -1,0 +1,2 @@
+[GREETING] Hello there!
+[FAREWELL] Safe travels!
