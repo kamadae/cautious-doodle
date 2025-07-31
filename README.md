@@ -60,11 +60,7 @@ also defines a second tier of materials (such as ``Big Fish`` or
 
 ## Crafting and Consuming
 
-Gathered materials are used by other skills to create better items. The
-``alchemy`` skill brews ``HealingPotion`` objects from herbs, awarding XP and
-removing the herbs from your inventory. The ``smithing`` skill forges
-``Steel Ingot``s out of ``Iron Ore``. Crafting actions consume resources and
-help those skills level up.
+Gathered materials are used by other skills to create better items. The ``alchemy`` skill brews ``HealingPotion`` objects from herbs, awarding XP and removing the herbs from your inventory. The ``smithing`` skill forges ``Steel Ingot``s out of ``Iron Ore``. Crafting actions consume resources and help those skills level up.
 
 ## Assets
 
