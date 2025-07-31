@@ -53,6 +53,7 @@ class WorldManager:
 
         item = self.item_at(player.x, player.y, area)
         if item:
+            print(f"{player.name} picked up {item.name}.")
             player.add_item(item)
             area.items.remove(item)
             item.position = None

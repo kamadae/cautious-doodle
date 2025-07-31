@@ -27,8 +27,10 @@ out automatically once an encounter occurs. Stepping on certain tiles
 will transition you to another ``Area`` such as the interior of a
 building before returning outside.
 
-While moving, a simple text HUD displays your current HP, level and
-current coordinates so you always know where you are on the map.
+While moving, a simple text HUD displays your current HP, level,
+inventory count, and current coordinates so you always know where you
+are on the map. Press ``i`` at any time to list the items you have
+collected.
 
 ## Playtesting
 

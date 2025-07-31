@@ -6,7 +6,8 @@ class HUD:
         hp_bar = f"HP: {player.hp}/{player.max_hp}"
         xp_bar = f"LVL: {player.level} (XP {player.xp.total_xp})"
         pos_bar = f"Pos: ({player.x}, {player.y})"
-        parts = [hp_bar, xp_bar, pos_bar]
+        inv_bar = f"Items: {len(player.inventory)}"
+        parts = [hp_bar, xp_bar, pos_bar, inv_bar]
         if area is not None:
             parts.append(f"Area: {area.name}")
         print(" | ".join(parts))

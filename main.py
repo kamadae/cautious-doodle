@@ -34,13 +34,16 @@ def main():
     world.add_item(potion, 1, 0)
     world.add_monster(goblin, 2, 2)
 
-    print("Use WASD to move, q to quit")
+    print("Use WASD to move, i to view inventory, q to quit")
     # continue until player dies or there are no monsters left in the current
     # area
     while player.is_alive() and world.current_area.monsters:
         cmd = input("Move: ").strip().lower()
         if cmd == "q":
             break
+        if cmd == "i":
+            print("Inventory:", ", ".join(player.list_inventory()) or "(empty)")
+            continue
         dx = dy = 0
         if cmd == "w":
             dy = -1

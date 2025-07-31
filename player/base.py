@@ -58,6 +58,10 @@ class Player:
     def add_item(self, item):
         self.inventory.append(item)
 
+    def list_inventory(self):
+        """Return a list of item names the player currently has."""
+        return [item.name for item in self.inventory]
+
     def use_item(self, item):
         if item in self.inventory:
             if hasattr(item, "use"):
